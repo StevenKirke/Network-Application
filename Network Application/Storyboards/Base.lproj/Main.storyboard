@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IfQ-Fc-qO5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nasa.ttf">
+            <string>Nasa</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zOr-yr-mn6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IfQ-Fc-qO5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FRV-ND-cxb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G63-w3-Vv2" kind="relationship" relationship="rootViewController" id="exh-3a-mrJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9BZ-qd-Z5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2221.739130434783" y="-182.14285714285714"/>
+        </scene>
+        <!--Rovers-->
+        <scene sceneID="Nb3-ov-Yj5">
+            <objects>
+                <tableViewController id="G63-w3-Vv2" customClass="RoversTableViewController" customModule="Network_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="240" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fsk-CX-atI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="240" id="zWh-ce-sHp" customClass="RoverCustomTableViewCell" customModule="Network_Application" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="240"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zWh-ce-sHp" id="kfh-qm-AFj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rover_curiosity" translatesAutoresizingMaskIntoConstraints="NO" id="Eoh-Jr-IfP">
+                                            <rect key="frame" x="57" y="15" width="300" height="180"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="Fij-0k-z6v"/>
+                                                <constraint firstAttribute="height" constant="180" id="m50-1X-28e"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-Cj-jLm">
+                                            <rect key="frame" x="178.5" y="210" width="57" height="19"/>
+                                            <fontDescription key="fontDescription" name="Nasa" family="Nasa" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="hXI-Cj-jLm" firstAttribute="centerX" secondItem="Eoh-Jr-IfP" secondAttribute="centerX" id="AOF-yC-4cn"/>
+                                        <constraint firstItem="Eoh-Jr-IfP" firstAttribute="centerX" secondItem="kfh-qm-AFj" secondAttribute="centerX" id="I4y-ax-wv2"/>
+                                        <constraint firstItem="hXI-Cj-jLm" firstAttribute="top" secondItem="Eoh-Jr-IfP" secondAttribute="bottom" constant="15" id="Yrh-A1-bOb"/>
+                                        <constraint firstItem="Eoh-Jr-IfP" firstAttribute="top" secondItem="kfh-qm-AFj" secondAttribute="top" constant="15" id="wXV-RN-q9J"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.98003902740248872" green="1" blue="0.93845280307167622" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="nameRoverLabel" destination="hXI-Cj-jLm" id="b45-i6-6GH"/>
+                                    <outlet property="photoRoverLabel" destination="Eoh-Jr-IfP" id="lu2-VG-T3A"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G63-w3-Vv2" id="y5Y-AY-lM8"/>
+                            <outlet property="delegate" destination="G63-w3-Vv2" id="veS-cv-x9C"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rovers" id="QaA-Mx-ijR"/>
+                    <connections>
+                        <segue destination="j1K-1p-ZhM" kind="show" identifier="showPhoto" id="y53-5U-VHM"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQY-FW-luP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2954" y="-182"/>
+        </scene>
+        <!--Photo Table View Controller-->
+        <scene sceneID="VKR-Il-dXg">
+            <objects>
+                <tableViewController id="j1K-1p-ZhM" customClass="PhotoTableViewController" customModule="Network_Application" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="swI-2D-Jt2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="300" id="FQX-Sx-JPl" customClass="PhotoCustomCellTableView" customModule="Network_Application" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FQX-Sx-JPl" id="Ba8-Ni-LYc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jap-iR-db8">
+                                            <rect key="frame" x="57" y="-11" width="300" height="300"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="HPF-Eb-og9"/>
+                                                <constraint firstAttribute="height" constant="300" id="v2x-me-0Ab"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P5l-aA-hWx">
+                                            <rect key="frame" x="57" y="207.5" width="300" height="81.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bj-S7-Ipd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rover" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eS-Ly-mqy">
+                                                    <rect key="frame" x="0.0" y="30.5" width="300" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="camera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPO-Uv-GSn">
+                                                    <rect key="frame" x="0.0" y="61" width="300" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-QF-IAb">
+                                            <rect key="frame" x="197" y="140" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="P5l-aA-hWx" firstAttribute="bottom" secondItem="jap-iR-db8" secondAttribute="bottom" id="7Dr-uQ-s6e"/>
+                                        <constraint firstItem="P5l-aA-hWx" firstAttribute="trailing" secondItem="jap-iR-db8" secondAttribute="trailing" id="CCD-JV-79c"/>
+                                        <constraint firstItem="P5l-aA-hWx" firstAttribute="leading" secondItem="jap-iR-db8" secondAttribute="leading" id="K5g-aU-hrb"/>
+                                        <constraint firstItem="jap-iR-db8" firstAttribute="centerX" secondItem="Ba8-Ni-LYc" secondAttribute="centerX" id="OU5-4g-ebX"/>
+                                        <constraint firstItem="OgX-QF-IAb" firstAttribute="centerY" secondItem="Ba8-Ni-LYc" secondAttribute="centerY" id="f5F-KM-RnK"/>
+                                        <constraint firstItem="P5l-aA-hWx" firstAttribute="centerX" secondItem="Ba8-Ni-LYc" secondAttribute="centerX" id="fBO-Fg-h45"/>
+                                        <constraint firstItem="OgX-QF-IAb" firstAttribute="centerX" secondItem="Ba8-Ni-LYc" secondAttribute="centerX" id="fSU-aU-imM"/>
+                                        <constraint firstItem="P5l-aA-hWx" firstAttribute="bottom" secondItem="Ba8-Ni-LYc" secondAttribute="bottomMargin" id="rl0-w5-RZ6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="cameraLabel" destination="qPO-Uv-GSn" id="bqO-nj-Rhg"/>
+                                    <outlet property="loader" destination="OgX-QF-IAb" id="aoF-tk-4du"/>
+                                    <outlet property="nameLabel" destination="8Bj-S7-Ipd" id="Ai2-je-ZQe"/>
+                                    <outlet property="photoRoversImage" destination="jap-iR-db8" id="bWv-BG-FPs"/>
+                                    <outlet property="roverNameLabel" destination="1eS-Ly-mqy" id="gmk-qI-0VG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="j1K-1p-ZhM" id="nO9-3C-0CK"/>
+                            <outlet property="delegate" destination="j1K-1p-ZhM" id="sS7-8U-DY5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tP3-ds-n0z"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNh-CP-dNb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3879.7101449275365" y="-182.14285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="rover_curiosity" width="439" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
